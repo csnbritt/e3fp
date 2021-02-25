@@ -326,7 +326,7 @@ def mol_from_sdf(sdf_file, conf_num=None, standardise=False):
     """
     mol = None
     conf_energies = []
-    with smart_open(sdf_file, "r") as f:
+    with smart_open(sdf_file, "rb") as f:
         supplier = rdkit.Chem.ForwardSDMolSupplier(f)
         i = 0
         while True:
